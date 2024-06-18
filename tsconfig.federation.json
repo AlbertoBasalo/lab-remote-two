@@ -8,6 +8,7 @@
     "src/main.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "node_modules\\@lab\\platform\\fesm2022\\lab-platform.mjs"
   ]
 }
