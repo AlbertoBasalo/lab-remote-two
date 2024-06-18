@@ -1,14 +1,12 @@
-import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, input } from '@angular/core';
 
 @Component({
   standalone: true,
   template: `
-    <h3>beta works with params:</h3>
-    <pre>{{ param }}</pre>
+    <h3>beta works with signal params:</h3>
+    <pre>{{ q() }}</pre>
   `,
 })
 export default class BetaPage {
-  #route = inject(ActivatedRoute);
-  param = this.#route.snapshot.queryParams['q'] || 'No params';
+  q = input<string>('no params');
 }
